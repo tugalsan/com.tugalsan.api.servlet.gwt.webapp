@@ -48,6 +48,11 @@
             <artifactId>com.tugalsan.api.file.json</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>com.tugalsan.api.gwt.jdk</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
     
     <build>
@@ -91,12 +96,11 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.14.0</version>
                 <configuration>
-                    <release>25</release><!--prop.jdk-->
-                      <enablePreview>true</enablePreview>
-                    <!-- <compilerArgs>
-                       <arg>- -add-modules</arg>
-                        <arg>jdk.incubator.vector</arg>
-                    </compilerArgs> -->
+                    <release>25</release>
+                    <enablePreview>true</enablePreview>
+                    <compilerArgs>
+                        <arg>--enable-preview</arg>
+                    </compilerArgs>
                 </configuration>
             </plugin>
         </plugins>
