@@ -4,8 +4,6 @@ import com.google.gwt.user.client.rpc.*;
 import com.tugalsan.api.function.client.maythrowexceptions.unchecked.TGS_FuncMTU_In1;
 import com.tugalsan.api.function.client.maythrowexceptions.unchecked.TGS_FuncMTU_OutTyped_In1;
 import com.tugalsan.api.log.client.*;
-
-
 import com.tugalsan.api.function.client.maythrowexceptions.unchecked.TGS_FuncMTU;
 import com.tugalsan.api.function.client.maythrowexceptions.unchecked.TGS_FuncMTUUtils;
 import com.tugalsan.api.function.client.maythrowexceptions.unchecked.TGS_FuncMTU_OutTyped;
