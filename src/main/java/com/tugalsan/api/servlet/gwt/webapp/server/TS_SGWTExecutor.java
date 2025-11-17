@@ -16,7 +16,14 @@ abstract public class TS_SGWTExecutor implements TGS_FuncMTU_In4<TS_ThreadSyncTr
         return 60;
     }
 
-    public Semaphore semaphore = new Semaphore(TS_OsCpuUtils.getProcessorCount() - 1);
+    public TS_SGWTExecutor(Semaphore semaphore) {
+        this.semaphore = semaphore;
+    }
+    final public Semaphore semaphore;
+
+    public TS_SGWTExecutor() {
+        this(new Semaphore(TS_OsCpuUtils.getProcessorCount() - 1));
+    }
 
     abstract public TS_SGWTValidationResult validate(TS_ThreadSyncTrigger servletKillTrigger, HttpServletRequest request, TGS_SGWTFuncBase funcBase);
 
